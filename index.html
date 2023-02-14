@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Shape Calculator</title>
+  </head>
+  <body>
+    <header class="image_Container">
+      <img src="./assets//ShapeCalculator.png" alt="Shape Calculator image" />
+    </header>
+    <main class="content">
+      <div class="sub_content">
+        <h1 class="welcome_heading">Welcome to Shape Calculator</h1>
+        <p class="description bold">
+          Shape Calculator is an interactive web application. To the right you
+          will find the 3 step application. Follow the instructions in each
+          step. Clicking cancel will take you back to step 1. Enjoy!
+        </p>
+        <p class="description">
+          A small river named Duden flows by their place and supplies it with
+          the necessary regelialia. It is a paradisematic country, in which
+          roasted parts of sentences fly into your mouth.
+        </p>
+        <p class="description">
+          Even the all-powerful Pointing has no control about the blind texts it
+          is an almost unorthographic life One day however a small line of blind
+          text by the name of Lorem Ipsum decided to leave for the far World of
+          Grammar. The Big Oxmox advised her not to do so, because there were
+          thousands of bad Commas.
+        </p>
+      </div>
+      <div class="calculator_container">
+        <h3 id="title" class="title">Step 1 : Select your shape</h3>
+        <p id="info" class="info">
+          Please select the shape that you would like to calculate the area of
+          and press the button "Go to step 2"
+        </p>
+        <div id="shapes" class="shape_Container">
+          <div class="shape_option">
+            <input
+              type="radio"
+              id="rectangle"
+              name="shape"
+              value="rectangle"
+              checked
+            /><label for="rectangle">Rectangle</label>
+          </div>
+          <div class="shape_option">
+            <input type="radio" id="circle" name="shape" value="circle" /><label
+              for="circle"
+              >Circle</label
+            >
+          </div>
+          <div class="shape_option">
+            <input type="radio" id="square" name="shape" value="square" /><label
+              for="square"
+              >Square</label
+            >
+          </div>
+          <div class="shape_option">
+            <input
+              type="radio"
+              id="ellipse"
+              name="shape"
+              value="ellipse"
+            /><label for="ellipse">Ellipse</label>
+          </div>
+        </div>
+        <div class="button_container" id="buttonOne">
+          <button class="goto_btn" id="stepOne" onclick="step2()">
+            Go to step 2
+          </button>
+          <p class="or">or</p>
+          <p onclick="location.reload()" class="cancle">Cancel</p>
+        </div>
+        <div class="values_container default" id="rectangle_value">
+          <div class="input_container">
+            <label class="bold" for="rectangle">Length:</label>
+            <input type="number" id="length" placeholder="Enter the length" />
+          </div>
+          <div class="input_container">
+            <label class="bold" for="rectangle">Breadth:</label>
+            <input type="number" id="breadth" placeholder="Enter the breadth" />
+            <div class="error" id="error"></div>
+          </div>
+        </div>
+        <div class="values_container default" id="circle_value">
+          <div class="input_container">
+            <label class="bold" for="circle">Radius:</label>
+            <input type="number" id="radius" placeholder="Enter the radius" />
+            <div class="error" id="error"></div>
+          </div>
+        </div>
+        <div class="values_container default" id="square_value">
+          <div class="input_container">
+            <label class="bold" for="square">Side:</label>
+            <input type="number" id="side" placeholder="Enter the Side" />
+            <div class="error" id="error"></div>
+          </div>
+        </div>
+        <div class="values_container default" id="ellipse_value">
+          <div class="input_container">
+            <label class="bold" for="ellipse">Minor Axis:</label>
+            <input
+              type="number"
+              id="minorAxis"
+              placeholder="Enter the Minor Axis"
+            />
+            <div class="error" id="error"></div>
+          </div>
+          <div class="input_container">
+            <label class="bold" for="ellipse">Major Axis:</label>
+            <input
+              type="number"
+              id="majorAxis"
+              placeholder="Enter the Major Axis"
+            />
+            <div class="error" id="error"></div>
+          </div>
+        </div>
+
+        <div class="button_container default" id="buttonTwo">
+          <button class="goto_btn default" id="stepTwo" onclick="step3()">
+            Go to step 3
+          </button>
+          <p class="or">or</p>
+          <p
+            onclick="location.reload()"
+            style="margin: 2px 10px; cursor: pointer"
+          >
+            Cancel
+          </p>
+        </div>
+        <div class="result_container default" id="result_container">
+          <p id="computedResult" class="computedResult"></p>
+        </div>
+        <button class="goto_btn default" id="stepThree" onclick="step1()">
+          Start Over
+        </button>
+      </div>
+      <aside>
+        <div class="add_container">
+          <p>120 x 240 Ad</p>
+          <p>(Vertical Banner)</p>
+        </div>
+      </aside>
+    </main>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
